@@ -98,7 +98,8 @@ function paintMap() {
 	//width = document.getElementById('slider-id-01').value;
 	//height = document.getElementById('slider-id-02').value;
 	//zoom = document.getElementById('slider-id-03').value;
-	link = '<table width=100% border=0 cellspacing=0 cellpadding=0><tr><td align=center><img=https://images.app.goo.gl/94BZkHKYejMkWJdJ8 href=https://techkasetti.com/3_D_product/3-D-01.html  conversion=false data-linkto=other>WebXR</a></td></tr></table></td></tr></table>';
+	//link = '<table width=100% border=0 cellspacing=0 cellpadding=0><tr><td align=center><img=https://images.app.goo.gl/94BZkHKYejMkWJdJ8 href=https://techkasetti.com/3_D_product/3-D-01.html  conversion=false data-linkto=other>WebXR</a></td></tr></table></td></tr></table>';
+	link ='<a href="https://techkasetti.com/3_D_product/3-D-01.html"><img src="https://images.app.goo.gl/94BZkHKYejMkWJdJ8"></a>'
 	if (!mapsKey) {
 		return;
 	}
