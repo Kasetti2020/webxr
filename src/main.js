@@ -144,11 +144,11 @@ sdk.getData(function (data) {
 	debounce(paintMap, 500)();
 });
 
-/*document.getElementById('workspace').addEventListener("input", function () {
+document.getElementById('workspace').addEventListener("input", function () {
 	console.log('3');
 	debounce(paintMap, 500)();
-	paintSliderValues();
-});*/
+	//paintSliderValues();
+});
 
 /***/ }),
 /* 1 */
