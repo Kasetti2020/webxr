@@ -72,7 +72,7 @@ __webpack_require__(1);
 var SDK = __webpack_require__(19);
 var sdk = new SDK(null, null, true); // 3rd argument true bypassing https requirement: not prod worthy
 
-var address, width, height, zoom, link, mapsKey;
+var address, width, link;
 
 function debounce (func, wait, immediate) {
 	var timeout;
@@ -88,13 +88,26 @@ function debounce (func, wait, immediate) {
 		if (callNow) func.apply(context, args);
 	};
 }
+function paintSettings () {
+	document.getElementById('text-input-id-0').value = mapsKey;
+	document.getElementById('text-input-id-1').value = address;
+	document.getElementById('slider-id-01').value = width;
+	document.getElementById('slider-id-02').value = height;
+	document.getElementById('slider-id-03').value = zoom;
+}
 
+function paintSliderValues () {
+	document.getElementById('slider-id-01-val').innerHTML = document.getElementById('slider-id-01').value;
+	document.getElementById('slider-id-02-val').innerHTML = document.getElementById('slider-id-02').value;
+	document.getElementById('slider-id-03-val').innerHTML = document.getElementById('slider-id-03').value;
+}
 function paintMap() {
 
 	console.log('2');
-	mapsKey = document.getElementById('text-input-id-0').value;
-	console.log('mapsKey'+mapsKey);
+	//mapsKey = document.getElementById('text-input-id-0').value;
+	//console.log('mapsKey'+mapsKey);
 	address = document.getElementById('text-input-id-1').value;
+	console.log('address'+address);
 	//width = document.getElementById('slider-id-01').value;
 	//height = document.getElementById('slider-id-02').value;
 	//zoom = document.getElementById('slider-id-03').value;
@@ -113,6 +126,7 @@ function paintMap() {
 		'&markers=' + address.split(' ').join('+') + '&key=' + mapsKey;*/
 	sdk.setContent(link);
 	sdk.setData({
+		address: address,
 		mapsKey: mapsKey
 	});
 	//localStorage.setItem('googlemapsapikeyforblock', mapsKey);
@@ -120,11 +134,11 @@ function paintMap() {
 }
 
 sdk.getData(function (data) {
-	
+	address = data.address || '';
 	mapsKey = data.mapsKey;
 	console.log('mapsKey'+mapsKey);
-	//paintSettings();
-	//paintSliderValues();
+	paintSettings();
+	paintSliderValues();
 	paintMap();
 	debounce(paintMap, 500)();
 });
