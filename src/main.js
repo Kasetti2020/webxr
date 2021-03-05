@@ -149,6 +149,7 @@ document.getElementById('workspace').addEventListener("input", function () {
 	console.log('3');
 	debounce(paintMap, 500)();
 	//paintSliderValues();
+	paintMap();
 });
 
 /***/ }),
