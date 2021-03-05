@@ -118,11 +118,11 @@ function paintMap() {
 	}
 	if(address=='yacht1')
 	{
-	  link ='<a href="https://techkasetti.com/3_D_product/3-D-01.html"><img src=https://moranyachts.imgix.net/wp-content/uploads/Luxury-yacht-sales-brokerage-scaled.jpg?auto=format&fit=crop&fm=webp%26nbsp%3B2x&h=400&ixlib=php-3.1.0&w=720&s=d8697af45f516e13c04e4d18813420da></a>'
+	  link ='<a href="https://techkasetti.com/3_D_product/3-D-01.html"><img src=https://static.designboom.com/wp-content/dbsub/392780/2020-09-01/avanguardia-mega-yacht-1800-5f4eac3d3892e.jpg></a>'
 	}
 	if(address=='yacht2')
 	{
-	  link ='<a href="https://techkasetti.com/3_D_product/3-D-01.html"><img src=https://moranyachts.imgix.net/wp-content/uploads/Luxury-yacht-sales-brokerage-scaled.jpg?auto=format&fit=crop&fm=webp%26nbsp%3B2x&h=400&ixlib=php-3.1.0&w=720&s=d8697af45f516e13c04e4d18813420da></a>'
+	  link ='<a href="https://techkasetti.com/3_D_product/3-D-01.html"><img src=https://images.pexels.com/photos/163236/luxury-yacht-boat-speed-water-163236.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500></a>'
 	}
 	
 	//link ='<a href="@href1"><img src=https://moranyachts.imgix.net/wp-content/uploads/Luxury-yacht-sales-brokerage-scaled.jpg?auto=format&fit=crop&fm=webp%26nbsp%3B2x&h=400&ixlib=php-3.1.0&w=720&s=d8697af45f516e13c04e4d18813420da></a>'
