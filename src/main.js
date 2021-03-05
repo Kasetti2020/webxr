@@ -134,7 +134,7 @@ function paintMap() {
 }
 
 sdk.getData(function (data) {
-	address = data.address;
+	address = data.address|| '';
 	console.log('address:'+address);
 	//mapsKey = data.mapsKey;
 	//console.log('mapsKey'+mapsKey);
@@ -148,7 +148,7 @@ document.getElementById('workspace').addEventListener("input", function () {
 	console.log('3');
 	debounce(paintMap, 500)();
 	//paintSliderValues();
-	paintMap();
+	
 });
 
 /***/ }),
