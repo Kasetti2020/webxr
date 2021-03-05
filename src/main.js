@@ -72,7 +72,7 @@ __webpack_require__(1);
 var SDK = __webpack_require__(19);
 var sdk = new SDK(null, null, true); // 3rd argument true bypassing https requirement: not prod worthy
 
-var address, link, yacht;
+var address, link, yacht, yacht1, yacht2;
 
 function debounce (func, wait, immediate) {
 	var timeout;
@@ -116,6 +116,15 @@ function paintMap() {
 	{
 	  link ='<a href="https://techkasetti.com/3_D_product/3-D-01.html"><img src=https://moranyachts.imgix.net/wp-content/uploads/Luxury-yacht-sales-brokerage-scaled.jpg?auto=format&fit=crop&fm=webp%26nbsp%3B2x&h=400&ixlib=php-3.1.0&w=720&s=d8697af45f516e13c04e4d18813420da></a>'
 	}
+	if(address=='yacht1')
+	{
+	  link ='<a href="https://techkasetti.com/3_D_product/3-D-01.html"><img src=https://moranyachts.imgix.net/wp-content/uploads/Luxury-yacht-sales-brokerage-scaled.jpg?auto=format&fit=crop&fm=webp%26nbsp%3B2x&h=400&ixlib=php-3.1.0&w=720&s=d8697af45f516e13c04e4d18813420da></a>'
+	}
+	if(address=='yacht2')
+	{
+	  link ='<a href="https://techkasetti.com/3_D_product/3-D-01.html"><img src=https://moranyachts.imgix.net/wp-content/uploads/Luxury-yacht-sales-brokerage-scaled.jpg?auto=format&fit=crop&fm=webp%26nbsp%3B2x&h=400&ixlib=php-3.1.0&w=720&s=d8697af45f516e13c04e4d18813420da></a>'
+	}
+	
 	//link ='<a href="@href1"><img src=https://moranyachts.imgix.net/wp-content/uploads/Luxury-yacht-sales-brokerage-scaled.jpg?auto=format&fit=crop&fm=webp%26nbsp%3B2x&h=400&ixlib=php-3.1.0&w=720&s=d8697af45f516e13c04e4d18813420da></a>'
 	
 	if (!address) {
