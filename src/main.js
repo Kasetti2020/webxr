@@ -118,7 +118,7 @@ function paintMap() {
 	}
 	if(address=='yacht1')
 	{
-	  link ='<a href="https://techkasetti.com/3_D_product/3-D-01.html"><img src=https://static.designboom.com/wp-content/dbsub/392780/2020-09-01/avanguardia-mega-yacht-1800-5f4eac3d3892e.jpg></a>'
+	  link ='<a href="https://techkasetti.com/3_D_product/3-D-01.html"><img src=https://media.gettyimages.com/photos/in-the-sunset-picture-id1021090120?s=612x612></a>'
 	}
 	if(address=='yacht2')
 	{
