@@ -72,7 +72,7 @@ __webpack_require__(1);
 var SDK = __webpack_require__(19);
 var sdk = new SDK(null, null, true); // 3rd argument true bypassing https requirement: not prod worthy
 
-var address, width, link;
+var address, link;
 
 function debounce (func, wait, immediate) {
 	var timeout;
@@ -89,11 +89,11 @@ function debounce (func, wait, immediate) {
 	};
 }
 function paintSettings () {
-	document.getElementById('text-input-id-0').value = mapsKey;
+	//document.getElementById('text-input-id-0').value = mapsKey;
 	document.getElementById('text-input-id-1').value = address;
-	document.getElementById('slider-id-01').value = width;
-	document.getElementById('slider-id-02').value = height;
-	document.getElementById('slider-id-03').value = zoom;
+	//document.getElementById('slider-id-01').value = width;
+	//document.getElementById('slider-id-02').value = height;
+	//document.getElementById('slider-id-03').value = zoom;
 }
 
 function paintSliderValues () {
@@ -118,7 +118,7 @@ function paintMap() {
 	}
 	//link ='<a href="@href1"><img src=https://moranyachts.imgix.net/wp-content/uploads/Luxury-yacht-sales-brokerage-scaled.jpg?auto=format&fit=crop&fm=webp%26nbsp%3B2x&h=400&ixlib=php-3.1.0&w=720&s=d8697af45f516e13c04e4d18813420da></a>'
 	
-	if (!mapsKey) {
+	if (!address) {
 		return;
 	}
 	/*var url = 'https://maps.googleapis.com/maps/api/staticmap?center=' +
@@ -127,7 +127,7 @@ function paintMap() {
 	sdk.setContent(link);
 	sdk.setData({
 		address: address,
-		mapsKey: mapsKey
+		//mapsKey: mapsKey
 	});
 	//localStorage.setItem('googlemapsapikeyforblock', mapsKey);
 
@@ -135,6 +135,7 @@ function paintMap() {
 
 sdk.getData(function (data) {
 	address = data.address || '';
+	console.log('address'+address);
 	mapsKey = data.mapsKey;
 	console.log('mapsKey'+mapsKey);
 	paintSettings();
