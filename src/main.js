@@ -112,9 +112,9 @@ function paintMap() {
 	//height = document.getElementById('slider-id-02').value;
 	//zoom = document.getElementById('slider-id-03').value;
 	//link = '<table width=100% border=0 cellspacing=0 cellpadding=0><tr><td align=center><img=https://images.app.goo.gl/94BZkHKYejMkWJdJ8 href=https://techkasetti.com/3_D_product/3-D-01.html  conversion=false data-linkto=other>WebXR</a></td></tr></table></td></tr></table>';
-	if(!address==yacht)
+	if(address==yacht)
 	{
-	link ='<a href="https://techkasetti.com/3_D_product/3-D-01.html"><img src=https://moranyachts.imgix.net/wp-content/uploads/Luxury-yacht-sales-brokerage-scaled.jpg?auto=format&fit=crop&fm=webp%26nbsp%3B2x&h=400&ixlib=php-3.1.0&w=720&s=d8697af45f516e13c04e4d18813420da></a>'
+	return link ='<a href="https://techkasetti.com/3_D_product/3-D-01.html"><img src=https://moranyachts.imgix.net/wp-content/uploads/Luxury-yacht-sales-brokerage-scaled.jpg?auto=format&fit=crop&fm=webp%26nbsp%3B2x&h=400&ixlib=php-3.1.0&w=720&s=d8697af45f516e13c04e4d18813420da></a>'
 	}
 	//link ='<a href="@href1"><img src=https://moranyachts.imgix.net/wp-content/uploads/Luxury-yacht-sales-brokerage-scaled.jpg?auto=format&fit=crop&fm=webp%26nbsp%3B2x&h=400&ixlib=php-3.1.0&w=720&s=d8697af45f516e13c04e4d18813420da></a>'
 	
@@ -136,19 +136,19 @@ function paintMap() {
 sdk.getData(function (data) {
 	address = data.address || '';
 	console.log('address'+address);
-	mapsKey = data.mapsKey;
-	console.log('mapsKey'+mapsKey);
+	//mapsKey = data.mapsKey;
+	//console.log('mapsKey'+mapsKey);
 	paintSettings();
 	paintSliderValues();
 	paintMap();
 	debounce(paintMap, 500)();
 });
 
-/*document.getElementById('workspace').addEventListener("input", function () {
+document.getElementById('workspace').addEventListener("input", function () {
 	console.log('3');
 	debounce(paintMap, 500)();
-	//paintSliderValues();
-});*/
+	paintSliderValues();
+});
 
 /***/ }),
 /* 1 */
