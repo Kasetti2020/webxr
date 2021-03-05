@@ -72,7 +72,7 @@ __webpack_require__(1);
 var SDK = __webpack_require__(19);
 var sdk = new SDK(null, null, true); // 3rd argument true bypassing https requirement: not prod worthy
 
-var address, link;
+var address, link, yacht;
 
 function debounce (func, wait, immediate) {
 	var timeout;
@@ -96,11 +96,11 @@ function paintSettings () {
 	//document.getElementById('slider-id-03').value = zoom;
 }
 
-function paintSliderValues () {
+/*function paintSliderValues () {
 	document.getElementById('slider-id-01-val').innerHTML = document.getElementById('slider-id-01').value;
 	document.getElementById('slider-id-02-val').innerHTML = document.getElementById('slider-id-02').value;
 	document.getElementById('slider-id-03-val').innerHTML = document.getElementById('slider-id-03').value;
-}
+}*/
 function paintMap() {
 
 	console.log('2');
